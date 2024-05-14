@@ -1,0 +1,66 @@
+body{
+    background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+    animation: slideIn 45s linear infinite;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.search{
+    display: flex;
+    justify-content: center;
+}
+
+.search input{
+    width: 300px;
+    height: 20px;
+    margin: 20px 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.movieDetails{
+    /*display: flex;*/
+    width: 400px;
+
+}
+
+.movieDetails img{
+    width: 100%;
+    height: 400px;
+
+}
+
+.movieTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.movieContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    row-gap: 50px;
+    /*margin: 200px;*/
+    /*padding: 10px;*/
+    margin: auto;
+    width: 90vw;
+
+}
+
+@keyframes slideIn {
+    0%{
+        background-position: top;
+        background-repeat: repeat;
+        background-size: 3000px;
+    }
+    100%{
+        background-position: -100% 100%;
+        background-size: 2753px;
+
+       }
+}
