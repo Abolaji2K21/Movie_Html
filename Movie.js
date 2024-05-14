@@ -1,4 +1,5 @@
 // 'https://api.themoviedb.org/3/movie/343611?api_key=3dd636a4d1c0b0a1dedb6bb1357aad8a'
+// https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg
 
 
 const API_KEY = "api_key=3dd636a4d1c0b0a1dedb6bb1357aad8a";
@@ -18,6 +19,7 @@ const getMovies = (url) => {
 }
 getMovies(MOVIE_URL);
 
+const imageUrl = "https://image.tmdb.org/t/p/w500"
 const movieContainer = document.querySelector(".movieContainer");
 const showMovies = (movies) => {
     movies.forEach((movie) => {
@@ -25,18 +27,13 @@ const showMovies = (movies) => {
         const divTag = document.createElement('div');
         divTag.classList.add("movieDetails");
         divTag.innerHTML = `
-    <img src="/asset/MovieImageFour.jpeg" alt="IMAGEONE">
+    <img src="${imageUrl}${poster_path}" alt="IMAGEONE">
     <div class="movieTitle">
         <p>${title}</p>
         <p>${vote_average}</p>
     </div>
     <h2> Overview</h2>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Accusamus alias aspernatur beatae deserunt distinctio dolorem illum
-        impedit labore nam necessitatibus nemo reiciendis, sapiente! Architecto
-        fuga ipsam officiis quis soluta voluptatibus.
-    </p>
+    <p>${overview}</p>
     `
         movieContainer.appendChild(divTag);
            });
